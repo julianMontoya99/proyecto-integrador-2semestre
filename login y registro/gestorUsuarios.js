@@ -1,6 +1,6 @@
-import { Cuenta } from "./gestorCuentas.js/cuenta.js";
-import { cuentaCliente } from "./gestorCuentas.js/cuentaCliente.js";
-import { cuentaAdministrador } from "./gestorCuentas.js/cuentaAdministrador.js";
+import { Cuenta } from "./cuenta.js";
+import { cuentaCliente } from "./cuentaCliente.js";
+import { cuentaAdministrador } from "./cuentaAdministrador.js";
 
 export function cargarCuenta(usuario){
     const clave = `cuenta_${usuario}`;
@@ -64,6 +64,18 @@ export function iniciarSesion(usuario, contraseña) {
 export function cerrarSesion() {
     sessionStorage.removeItem('usuarioActivo');
     // Opcional: redirigir o actualizar interfaz
+}
+
+// Cambiar contraseña
+export function cambiarClave(usuario, contraseñaActual, contraseñaNueva, ConfirmarContraseña) {
+    const cuenta = cargarCuenta(usuario);
+    if (!cuenta) return 'Usuario no encontrado';
+    if (cuenta.contraseña !== contraseñaActual) return 'Contraseña actual incorrecta';
+    if (contraseñaNueva !== ConfirmarContraseña) return 'Contraseña nueva no coincide';
+
+    cuenta.contraseña = contraseñaNueva;
+    cuenta.guardarCuenta();
+    return 'Contraseña actualizada';
 }
 
 // Función para obtener usuario logueado

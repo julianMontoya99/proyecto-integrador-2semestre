@@ -23,7 +23,9 @@
         <section class="hamburger">
             <button class="hamburger-boton" onclick="toggleMenu()" style="margin: 0px">☰</button>
             <section class="dropdown" id="menu">
-                <a href="../login y registro/login.html">Iniciar Sesión</a>
+                <section id="menuUsuario">
+                    <a href="../login y registro/login.html" id="enlaceLogin">Iniciar Sesión</a>
+                </section>
                 <a href="../catalogo/catalogo.html">Catalogo de servicios</a>
                 <a href="../cotizacion/cotizador.html">Cotización</a>
                 <a href="../agendamiento de citas/citas.html">Agendamiento de citas</a>
@@ -41,9 +43,19 @@
                         <a href="https://wa.me/573023381755" target="_blank" class="social"><i class="fab fa-whatsapp"></i></a>
                     </div>
                     <p>utiliza tu correo electronico para registrarte</p>
-                    <input type="text" name="nombre" placeholder="Nombre" required="">
-                    <input type="email" name="email" placeholder="Correo electrónico" required="">
-                    <input type="password" name="pswd" placeholder="Contraseña" required="">
+                    <input type="text" id="usuarioRegistro" placeholder="Nombre" required>
+                    <input type="text" id="idRegistro" placeholder="Identificación" required>
+                    <input type="email" id="correoRegistro" placeholder="Correo electrónico" required>
+                    <input type="password" id="passwordRegistro" placeholder="Contraseña" required>
+                    <input type="password" id="passwordConfirmacion" placeholder="Confirmar Contraseña" required>
+                    <section class="tipoCuenta">
+                        <label class="cuenta">
+                            <input type="radio" name="tipoCuenta" value="cliente" required /> cliente
+                        </label>
+                        <label class="cuenta">
+                            <input type="radio" name="tipoCuenta" value="administrador" required /> administrador
+                        </label>
+                    </section>
                     <button type="submit">Registrar</button>
                 </form>
             </div>
@@ -58,11 +70,11 @@
                         <a href="https://wa.me/573023381755" target="_blank" class="social"><i class="fab fa-whatsapp"></i></a>
                     </div>
                     <p>usa tu cuenta</p>
-                    <input type="email" name="email" placeholder="Correo electrónico" required="">
-                    <input type="password" name="pswd" placeholder="Contraseña" required="">
+                    <input type="text" id="usuarioLogin" placeholder="Usuario" required="">
+                    <input type="password" id="passwordLogin" placeholder="Contraseña" required="">
                     <a href="#">¿Olvidaste tu contraseña?</a>
                     
-                    <button type="submit">Iniciar sesión</button>
+                    <button type="submit" id="btnLogin">Iniciar sesión</button>
                     
                 </form>
             </div>
@@ -80,6 +92,7 @@
                     </div>
                 </div>
             </div>
+            <section id="mensajeSistema" class="mensaje-sistema oculto"></section>
         </div>
     </main>
     <footer>
@@ -112,6 +125,7 @@
         </section>
     </footer>
     <script src="script.js"></script>
+    <script type="module" src="./main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

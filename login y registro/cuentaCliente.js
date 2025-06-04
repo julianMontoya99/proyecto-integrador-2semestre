@@ -1,4 +1,4 @@
-import { Cuenta } from "./gestorCuentas.js/cuenta.js";
+import { Cuenta } from "./cuenta.js";
 
 export class cuentaCliente extends Cuenta{
     constructor(usuario, id, correo, contraseña) {
