@@ -187,175 +187,150 @@
   margin: 10px;
 }
 
-  /*  */
+
+/* Login */
+
+.oculto {
+  display: none !important;
+}
+
 main{
-    border-radius: 10px;
-    background-color: white;
-    padding: 20px;
-    margin: 20px;
-    box-shadow: 0 2px 5px green;
-    display: flex;
-    justify-content: center;
+  background-color: whitesmoke;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px green;
+  margin: 20px auto;
+  max-width: 600px;
+  text-align: center;
+
 }
-.container{
-    position: relative;
-    width: 768px;
-    max-width: 100%;
-    min-height: 580px;
-    background: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25),
-                0 10px 10px rgba(0,0,0,0.22)
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
-.sign-up, .sign-in{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    transition: all 0.6s ease-in-out;
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"] {
+  padding: 12px 15px;
+  border: 1.8px solid green;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: black;
+  background-color: #fcfaf7;
+  box-shadow: inset 2px 2px 6px #f3ede6, inset -2px -2px 6px #fff;
+  transition: border-color 0.3s ease;
 }
-.sign-up{
-    width: 50%;
-    opacity: 0;
-    z-index: 2;
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus {
+  outline: none;
+  border-color: green;
+  box-shadow: 0 0 8px green;
+  background-color: #fff;
 }
-.sign-in{
-    width: 50%;
-    z-index: 2;
+button,
+input[type="submit"] {
+  background-color: green;
+  color: #fff;
+  border: none;
+  padding: 14px 0;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+  transition: background-color 0.25s ease, transform 0.15s ease;
 }
-form{
-    background: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 50px;
-    height: 100%;
-    text-align: center;
+button:hover,
+input[type="submit"]:hover {
+  background-color: darkgreen;
+  transform: translateY(-2px);
 }
-h1{
-    font-weight: bold;
-    margin: 0;
+/* Enlaces y botones secundarios */
+a, .btn-secundario {
+  color: green;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  transition: color 0.3s ease;
 }
-p{
-    font-size: 14px;
-    font-weight: 100;
-    line-height: 20px;
-    letter-spacing: 0.5px;
-    margin: 15px 0 20px;
+a:hover, .btn-secundario:hover {
+  color: darkgreen;
 }
-input{
-    background: #eee;
-    padding: 12px 15px;
-    margin: 8px 15px;
-    width: 100%;
-    border-radius: 5px;
-    border: none;
-    outline: none;
+/* Estilos para el botón de registro */
+.btn-registro {
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
-a{
-    color: #333;
-    font-size: 14px;
-    text-decoration: none;
+.btn-registro:hover {
+  background-color: darkgreen;
+  transform: scale(1.05);
 }
-button{
-    color: #fff;
-    background: #1100ff;
-    font-size: 12px;
-    font-weight: bold;
-    padding: 12px 55px;
-    margin: 20px;
-    border-radius: 20px;
-    border: 1px solid #00ff11;
-    outline: none;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    transition: transform 80ms ease-in;
-    cursor: pointer;
+/* Estilos para el botón de inicio de sesión */
+.btn-login {
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
-button:active{
-    transform: scale(0.90);
+.btn-login:hover {
+  background-color: darkgreen;
+  transform: scale(1.05);
 }
-#signIn, #signUp{
-    background-color: transparent;
-    border: 2px solid #fff;
+/* Estilos para el botón de cerrar sesión */
+.btn-logout {
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
-.container.right-panel-active .sign-in{
-    transform: translateX(100%);
-}
-.container.right-panel-active .sign-up{
-    transform: translateX(100%);
-    opacity: 1;
-    z-index: 5;
-}
-.overlay-container{
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
-    transition: transform 0.6s ease-in-out;
-    z-index: 100;
-}
-.container.right-panel-active .overlay-container{
-    transform: translateX(-100%);
-}
-.overlay{
-    position: relative;
-    color: #fff;
-    background: #000000;
-    left: -100%;
-    height: 100%;
-    width: 200%;
-    background: linear-gradient(to right, #00fb2e, #000484);
-    transform: translateX(0);
-    transition: transform 0.6s ease-in-out;
-}
-.container.right-panel-active .overlay{
-    transform: translateX(50%);
-}
-.overlay-left, .overlay-right{
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 40px;
-    text-align: center;
-    top: 0;
-    height: 100%;
-    width: 50%;
-    transform: translateX(0);
-    transition: transform 0.6s ease-in-out;
-}
-.overlay-left{
-    transform: translateX(-20%);
-}
-.overlay-right{
-    right: 0;
-    transform: translateX(0);
-}
-.container.right-panel-active .overlay-left{
-    transform: translateX(0);
-}
-.container.right-panel-active .overlay-right{
-    transform: translateX(20%);
+.btn-logout:hover {
+  background-color: darkgreen;
+  transform: scale(1.05);
 }
 
-.tipoCuenta{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 2px;
-    height: 20px;
-    justify-content: space-between;
+.mensaje-alerta,
+.mensaje-error,
+.mensaje-sistema.mensaje-error{
+  padding: 12px 15px;
+  background-color: #f8d7da;
+  color: #721c24;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(201, 76, 76, 0.7);
 }
 
-.cuenta{
-    display: flex;
-    align-items: center;
-    margin: 0 10px;
+.mensaje-exito,
+.mensaje-sistema.mensaje-exito{
+  padding: 12px 15px;
+  background-color: #d4edda;
+  color: #155724;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(76, 148, 76, 0.7);
 }
+
+
+
 

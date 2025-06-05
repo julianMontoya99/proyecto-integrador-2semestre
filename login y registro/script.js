@@ -1,7 +1,7 @@
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    const signUpButton = document.getElementById("signUp");
+    const signUpButton = document.getElementById("seccionRegistro");
     const signInButton = document.getElementById("signIn");
     const container = document.getElementById("main");
 

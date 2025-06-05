@@ -32,69 +32,45 @@
             </section>
         </section>
     </header>
+    
     <main>
-        <div class="container" id="main">
-            <div class="sign-up">
-                <form action="registrar.php" method="post">
-                    <h1>Crear una cuenta</h1>
-                    <div class="social-container">
-                        <a href="https://www.facebook.com/people/Controles-Ambientales-AB/61566639934175/" target="_blank" class="social"><i class="fab fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/coamb21/" target="_blank" class="social"><i class="fab fa-instagram"></i></a>
-                        <a href="https://wa.me/573023381755" target="_blank" class="social"><i class="fab fa-whatsapp"></i></a>
-                    </div>
-                    <p>utiliza tu correo electronico para registrarte</p>
-                    <input type="text" id="usuarioRegistro" placeholder="Nombre" required>
-                    <input type="text" id="idRegistro" placeholder="Identificación" required>
-                    <input type="email" id="correoRegistro" placeholder="Correo electrónico" required>
-                    <input type="password" id="passwordRegistro" placeholder="Contraseña" required>
-                    <input type="password" id="passwordConfirmacion" placeholder="Confirmar Contraseña" required>
-                    <section class="tipoCuenta">
-                        <label class="cuenta">
-                            <input type="radio" name="tipoCuenta" value="cliente" required /> cliente
-                        </label>
-                        <label class="cuenta">
-                            <input type="radio" name="tipoCuenta" value="administrador" required /> administrador
-                        </label>
-                    </section>
-                    <button type="submit">Registrar</button>
-                </form>
-            </div>
+        <!-- Sección de Login -->
+        <section id="seccionLogin" class="">
+            <h2>Iniciar sesión</h2>
+            <form id="formLogin">
+                <input type="text" id="usuarioLogin" placeholder="Usuario" required />
+                <input type="password" id="passwordLogin" placeholder="Contraseña" required />
+                <button type="submit" id="btnLogin">Iniciar sesión</button>
+            </form>
+            <button id="btnMostrarRegistro">Registrarse</button>
+        </section>
 
+        <!-- Sección de Registro -->
+        <section id="seccionRegistro" class="oculto">
+            <h2>Registrar Cuenta</h2>
+            <form id="formRegistro">
+                <input type="text" id="usuarioRegistro" placeholder="Usuario" required />
+                <input type="text" id="idRegistro" placeholder="ID" required />
+                <input type="email" id="correoRegistro" placeholder="Correo" required />
+                <input type="password" id="passwordRegistro" placeholder="Contraseña (4 dígitos)" required />
+                <input type="password" id="passwordConfirmacion" placeholder="Confirmar Contraseña" required />
+                <section>
+                    <label>
+                        <input type="radio" name="tipoCuenta" value="cliente" required /> Cliente
+                    </label>
+                    <label>
+                        <input type="radio" name="tipoCuenta" value="administrador" required /> Administrador
+                    </label>
+                </section>
+                <button type="submit">Registrar</button>
+            </form>
+            <button id="btnRegresarLogin">Volver a atrás</button>
 
-            <div class="sign-in">
-                <form action="login.php" method="post">
-                    <h1>Iniciar sesión</h1>
-                    <div class="social-container">
-                        <a href="https://www.facebook.com/people/Controles-Ambientales-AB/61566639934175/" target="_blank" class="social"><i class="fab fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/coamb21/" target="_blank" class="social"><i class="fab fa-instagram"></i></a>
-                        <a href="https://wa.me/573023381755" target="_blank" class="social"><i class="fab fa-whatsapp"></i></a>
-                    </div>
-                    <p>usa tu cuenta</p>
-                    <input type="text" id="usuarioLogin" placeholder="Usuario" required="">
-                    <input type="password" id="passwordLogin" placeholder="Contraseña" required="">
-                    <a href="#">¿Olvidaste tu contraseña?</a>
-                    
-                    <button type="submit" id="btnLogin">Iniciar sesión</button>
-                    
-                </form>
-            </div>
-            <div class="overlay-container">
-                <div class="overlay">
-                    <div class="overlay-left">
-                        <h1>Bienvenido de nuevo!</h1>
-                        <p>Para mantenerse conectado con nosotros,inicie sesion con su informacion personal</p>
-                        <button type="submit" id="signIn">Iniciar sesión</button>
-                    </div>
-                    <div class="overlay-right">
-                        <h1>Hola, amig@</h1>
-                        <p>Introduce tus datos personales y comienza tu viaje con nosotros</p>
-                        <button type="submit" id="signUp">Registrar</button>
-                    </div>
-                </div>
-            </div>
-            <section id="mensajeSistema" class="mensaje-sistema oculto"></section>
-        </div>
+        </section>
+
+        <section id="mensajeSistema" class="mensaje-sistema oculto"></section>
     </main>
+
     <footer>
         <section>
             <section class="footer-content">
@@ -124,7 +100,6 @@
             <p>© Todos los derechos reservados - 2025</p>
         </section>
     </footer>
-    <script src="script.js"></script>
     <script type="module" src="./main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

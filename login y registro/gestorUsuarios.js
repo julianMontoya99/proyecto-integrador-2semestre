@@ -66,18 +66,6 @@ export function cerrarSesion() {
     // Opcional: redirigir o actualizar interfaz
 }
 
-// Cambiar contraseña
-export function cambiarClave(usuario, contraseñaActual, contraseñaNueva, ConfirmarContraseña) {
-    const cuenta = cargarCuenta(usuario);
-    if (!cuenta) return 'Usuario no encontrado';
-    if (cuenta.contraseña !== contraseñaActual) return 'Contraseña actual incorrecta';
-    if (contraseñaNueva !== ConfirmarContraseña) return 'Contraseña nueva no coincide';
-
-    cuenta.contraseña = contraseñaNueva;
-    cuenta.guardarCuenta();
-    return 'Contraseña actualizada';
-}
-
 // Función para obtener usuario logueado
 export function obtenerUsuarioActivo() {
     return sessionStorage.getItem('usuarioActivo');
