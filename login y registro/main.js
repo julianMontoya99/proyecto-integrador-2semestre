@@ -60,7 +60,7 @@ if (formLogin) {
             if (cuentaActiva.tipoCuenta == 'cliente'){
                 window.location.replace('../vistaCliente/index.html')
             } else {
-                window.location.replace('../catalogo/catalogo.html')
+                window.location.replace('../vistaAdministrador/index.html')
             }
         } else {
             mostrarMensaje(resultado, true);

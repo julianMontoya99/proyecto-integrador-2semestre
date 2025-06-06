@@ -2,46 +2,51 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="styleCitas.css">
+  <link rel="stylesheet" href="./cotizador.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
   <title>CONTROLES AMBIENTALES A & B S.A.S</title>
 </head>
 <body>
   <header>
     <section class="logo">
-            <img src="./imagenes/Logo.jpeg" alt="" class="imgLogo">
+            <img src="../cotizador/imagenes/Logo.jpeg" alt="" class="imgLogo">
         </section>
 
         <section class="middle-text" style="font-size: 20px;">
-            <section><a href="../inicio pagina web/index.html">Inicio</a></section>
-            <section><a href="../recomendaciones/recomendaciones.html">Recomendaciones</a></section>
-            <section><a href="../contactos/contacto.html">¿Quieres que te contactemos?</a></section>
-            <section><a href="../catalogo/catalogo.html">Servicios</a></section>
+            <section><a href="../index.html">Inicio</a></section>
+            <section><a href="../recomendaciones.html">Recomendaciones</a></section>
+            <section><a href="../contacto.html">¿Quieres que te contactemos?</a></section>
+            <section><a href="../catalogo.html">Servicios</a></section>
         </section>
 
         <section class="hamburger">
             <button class="hamburger-button" onclick="toggleMenu()">☰</button>
             <section class="dropdown" id="menu">
-                <a href="../login y registro/login.html">Iniciar Sesión</a>
-                <a href="../catalogo/catalogo.html">Catalogo de servicios</a>
-                <a href="../cotizacion/cotizador.html">Cotización</a>
-                <a href="../agendamiento de citas/citas.html">Agendamiento de citas</a>
+                <section>
+                    <span id="nombreUsuario">usuario</span>
+                    <button class="cerrarSesion" id="btnCerrarSesion">Cerrar Sesión</button>
+                </section>
+                <a href="../catalogo.html">Catalogo de servicios</a>
+                <a href="../cotizador/cotizador.html">Cotización</a>
+                <a href="../citas.html">Agendamiento de citas</a>
             </section>
         </section>
   </header>
-
   <main>
-    <section>
-      <h1>Citas Agendadas</h1>
-    </section>
-    <section>
-      <ul id="lista-citas"></ul>
-    </section>
-    <section class="verCitas">
-      <a href="../vistaAdministrador/citas.html">Volver</a>
-    </section>
+      <section>
+        <h1>Cotizaciones</h1>
+        <h1>Selecciona un Servicio</h1>
+      </section>
+
+      <section class="galeria" id="galeria"></section>
+
+      <section class="formulario">
+        <label for="metros" class="metros">Metros Cuadrados:</label>
+        <input type="number" id="metros" min="1" required>
+        <button id="cotizar">Cotizar</button>
+        <p id="resultado"></p>
+      </section>
   </main>
-  
   <footer>
     <section>
         <section class="footer-content">
@@ -71,6 +76,7 @@
         <p>© Todos los derechos reservados - 2025</p>
     </section>
   </footer>
-  <script src="./verCitas.js"></script>
+  <script src="cotizador.js"></script>
+  <script type="module" src="../../login y registro/main.js"></script>
 </body>
 </html>
