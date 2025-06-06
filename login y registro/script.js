@@ -1,5 +1,5 @@
 
-
+/* 
 document.addEventListener("DOMContentLoaded", () => {
     const signUpButton = document.getElementById("seccionRegistro");
     const signInButton = document.getElementById("signIn");
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     signInButton.addEventListener("click", () => {
         container.classList.remove("right-panel-active");
     });
-});
+}); */
 
 function toggleMenu() {
     const menu = document.getElementById("menu");
