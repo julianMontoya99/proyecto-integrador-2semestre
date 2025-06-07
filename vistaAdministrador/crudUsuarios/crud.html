@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../login y registro/styleLogin.css">
+    <script src="https://kit.fontawesome.com/1c2ac6f27a.js" crossorigin="anonymous"></script>
+    <title>CONTROLES AMBIENTALES A & B S.A.S</title>
+</head>
+<body>
+    <header>
+        <section class="logo">
+            <img src="../../login y registro/imagenes/Logo.jpeg" alt="" class="imgLogo">
+        </section>
+
+        <section class="middle-text" style="font-size: 20px;">
+            <section><a href="../index.html">Inicio</a></section>
+            <section><a href="../recomendaciones.html">Recomendaciones</a></section>
+            <section><a href="../contacto.html">¿Quieres que te contactemos?</a></section>
+            <section><a href="../catalogo.html">Servicios</a></section>
+        </section>
+
+        <section class="hamburger">
+            <button class="hamburger-button" onclick="toggleMenu()">☰</button>
+            <section class="dropdown" id="menu">
+                <section>
+                        <span id="nombreUsuario">usuario</span>
+                        <button class="cerrarSesion" id="btnCerrarSesion">Cerrar Sesión</button>
+                    </section>
+                <a href="../catalogo.html">Catalogo de servicios</a>
+                <a href="../cotizador/cotizador.html">Cotización</a>
+                <a href="../citas.html">Agendamiento de citas</a>
+                <a href="../crudUsuarios/crud.html">Usuarios</a>
+            </section>
+        </section>
+    </header>
+
+    <main>
+        <!-- Sección de Registro -->
+        <section id="seccionRegistro" >
+            <h2>Registrar Cuenta</h2>
+            <form id="formRegistroCrud">
+                <input type="text" id="usuarioRegistro" placeholder="Usuario" required />
+                <input type="text" id="idRegistro" placeholder="ID" required />
+                <input type="email" id="correoRegistro" placeholder="Correo" required />
+                <input type="password" id="passwordRegistro" placeholder="Contraseña (4 dígitos)" required />
+                <input type="password" id="passwordConfirmacion" placeholder="Confirmar Contraseña" required />
+                <section>
+                    <label>
+                        <input type="radio" name="tipoCuenta" value="cliente" required /> Cliente
+                    </label>
+                    <label>
+                        <input type="radio" name="tipoCuenta" value="administrador" required /> Administrador
+                    </label>
+                </section>
+                <button type="submit">Registrar</button>
+            </form>
+
+        </section>
+
+        <section id="mensajeSistema" class="mensaje-sistema "></section>
+    </main>
+
+    <!-- seccion lista de usuarios -->
+    <section class="listaUsuarios">
+        <table>
+            <thead>
+                <tr>
+                    <th>usuario</th>
+                    <th>id</th>
+                    <th>correo</th>
+                    <th>tipoCuenta</th>
+                    <th>Editar Usuario / Eliminar</th>
+                </tr>
+            </thead>
+            <tbody id="tablaUsuarios">
+                
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <section>
+            <section class="footer-content">
+                <section class="letraFooter">
+                    <p>Cobertura</p>
+                    <p>Atención a toda el área metropolitana</p>
+                </section>
+                <section>
+                    <p>Correo: controles.ambientales@gmail.com</p>
+                    <p>Dirección: Calle 25 # 60 - 115 </p>
+                    <p>Celular: 302 338 17 55</p>
+                </section>
+                <section>
+                    <section class="social-container">
+                        <p>Redes Sociales</p>
+                        <a href="https://www.facebook.com/people/Controles-Ambientales-AB/61566639934175/" target="_blank" class="social"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/coamb21/" target="_blank" class="social"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/573023381755" target="_blank" class="social"><i class="fab fa-whatsapp"></i></a>
+                    </section>
+                </section>
+                <section>
+                    <img src="../../login y registro/imagenes/Logo.jpeg" alt="Logo" class="imgLogo">
+                </section>
+            </section>
+        </section>
+        <section class="copiright">
+            <p>© Todos los derechos reservados - 2025</p>
+        </section>
+    </footer>
+    <script src="../../login y registro/script.js"></script>
+    <script type="module" src="../../login y registro/main.js"></script>
+</body>
+</html>

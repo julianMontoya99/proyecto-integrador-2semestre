@@ -336,6 +336,55 @@ button{
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+/*  */
+.cerrarSesion {
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+span#nombreUsuario {
+    font-weight: bold;
+    color: black;
+    margin-right: 10px;
+} 
+
+/* lista Crud */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+th {
+    background-color: green;
+    color: white;
+}
+td {
+    background-color: #f9f9f9;
+}
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+.listaUsuarios{
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px green;
+    margin: 20px auto;
+    max-width: 80%;
+    text-align: center;
+}
+
+
 
 
 

@@ -13,19 +13,23 @@
         </section>
 
         <section class="middle-text" style="font-size: 20px;">
-            <section><a href="../inicio pagina web/index.html">Inicio</a></section>
-            <section><a href="../recomendaciones/recomendaciones.html">Recomendaciones</a></section>
-            <section><a href="../contactos/contacto.html">¿Quieres que te contactemos?</a></section>
-            <section><a href="../catalogo/catalogo.html">Servicios</a></section>
+            <section><a href="../vistaAdministrador/index.html">Inicio</a></section>
+            <section><a href="../vistaAdministrador/recomendaciones.html">Recomendaciones</a></section>
+            <section><a href="../vistaAdministrador/contacto.html">¿Quieres que te contactemos?</a></section>
+            <section><a href="../vistaAdministrador/catalogo.html">Servicios</a></section>
         </section>
 
         <section class="hamburger">
             <button class="hamburger-button" onclick="toggleMenu()">☰</button>
             <section class="dropdown" id="menu">
-                <a href="../login y registro/login.html">Iniciar Sesión</a>
-                <a href="../catalogo/catalogo.html">Catalogo de servicios</a>
-                <a href="../cotizacion/cotizador.html">Cotización</a>
-                <a href="../agendamiento de citas/citas.html">Agendamiento de citas</a>
+                <section>
+                    <span id="nombreUsuario">usuario</span>
+                    <button class="cerrarSesion" id="btnCerrarSesion">Cerrar Sesión</button>
+                </section>
+                <a href="../vistaAdministrador/catalogo.html">Catalogo de servicios</a>
+                <a href="../vistaAdministrador/cotizador/cotizador.html">Cotización</a>
+                <a href="../vistaAdministrador/citas.html">Agendamiento de citas</a>
+                <a href="../vistaAdministrador/crudUsuarios/crud.html">Usuarios</a>
             </section>
         </section>
   </header>
@@ -72,5 +76,6 @@
     </section>
   </footer>
   <script src="./verCitas.js"></script>
+  <script type="module" src="../login y registro/main.js"></script>
 </body>
 </html>
